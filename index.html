@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Admin Dashboard With Charts</title>
+</head>
+
+<body>
+    <aside id="aside-sidebar">
+        <h1>Codersup</h1>
+        <i class='bx bxs-home'></i>
+        <h3>MNG</h3>
+        <ul>
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-user-account'></i>
+                    <span>Admin Management</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-buildings'></i>
+                    <span>Company Management</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-id-card'></i>
+                    <span>Employee Management</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-store-alt'></i>
+                    <span>Warehouse</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-briefcase bx-flip-horizontal'></i>
+                    <span>Contracts</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bx-question-mark'></i>
+                    <span>Requests</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-file-doc'></i>
+                    <span>Leave Policy</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-calendar-star'></i>
+                    <span>Special Days</span>
+                </a></li>
+
+            <li class="nav-links"><a href="#">
+                    <i class='bx bxs-receipt'></i>
+                    <span>Apply for Leave</span>
+                </a></li>
+        </ul>
+    </aside>
+    <nav id="navbar">
+        <div class="navbar-links-div">
+            <a href="#" class="navbar-links">Subscribers</a>
+            <a href="#" class="navbar-links">Video Management</a>
+            <a href="#" class="navbar-links active-link">Admin</a>
+        </div>
+        <div class="navbar-profile">
+            <i class='bx bx-search-alt-2'></i>
+            <i class='bx bxs-time'></i>
+            <img src="/img/profile.jpg" alt="profile-img">
+        </div>
+    </nav>
+    <main id="main-container">
+        <div class="hello">
+            <img src="/img/coder.png" alt="coder">
+            <div>
+                <h4>Hello coders</h4>
+            <p>Welcome to your Admin Dashboard</p>
+            </div>
+        </div>
+
+        <div class="main-cards">
+            <div class="main-card">
+                <i class='bx bxs-user'></i>
+                <p>No. of Subscribers</p>
+                <span>578</span>
+            </div>
+            <div class="main-card">
+                <i class='bx bxs-calendar'></i>
+                <p>Times of watching</p>
+                <span>2433</span>
+            </div>
+            <div class="main-card">
+                <i class='bx bxs-videos'></i>
+                <p>No. of Videos</p>
+                <span>578</span>
+            </div>
+            <div class="main-card">
+                <i class='bx bxs-like'></i>
+                <p>No. of Likes</p>
+                <span>1213</span>
+            </div>
+        </div>
+
+        <div class="chart-cards">
+            <div class="chart-card">
+                <div class="chart-des">
+                    <h4>Daily Reports</h4>
+                    <p>Bengaluru</p>
+                    <i class='bx bx-dollar-circle'></i>
+                </div>
+                <div class="apexchart">
+
+                </div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-des">
+                    <h4>Stats Reports</h4>
+                    <p>Delhi</p>
+                    <i class='bx bx-dollar-circle'></i>
+                </div>
+                <div class="stats">
+                    <div>
+                        <h3>Income</h3>
+                        <span>$97,500</span>
+                    </div>
+                    <div>
+                        <h3>Sales</h3>
+                        <span>$241,341</span>
+                    </div>
+                    <div>
+                        <h3>Profit</h3>
+                        <span>$5545</span>
+                    </div>
+                    <div>
+                        <h3>Stock</h3>
+                        <span>$57878</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
