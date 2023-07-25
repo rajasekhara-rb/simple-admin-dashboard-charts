@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <title>Admin Dashboard With Charts</title>
 </head>
 
 <body>
     <aside id="aside-sidebar">
         <h1>Codersup</h1>
-        <i class='bx bxs-home'></i>
-        <h3>MNG</h3>
+        <div>
+            <i class='bx bxs-home'></i>
+            <h3>MNG</h3>
+        </div>
         <ul>
             <li class="nav-links"><a href="#">
                     <i class='bx bxs-user-account'></i>
@@ -78,7 +81,7 @@
             <img src="/img/coder.png" alt="coder">
             <div>
                 <h4>Hello coders</h4>
-            <p>Welcome to your Admin Dashboard</p>
+                <p>Welcome to your Admin Dashboard</p>
             </div>
         </div>
 
@@ -106,20 +109,24 @@
         </div>
 
         <div class="chart-cards">
-            <div class="chart-card">
+            <div id="chart-card-1" class="chart-card">
                 <div class="chart-des">
-                    <h4>Daily Reports</h4>
-                    <p>Bengaluru</p>
+                    <div>
+                        <h4>Daily Reports</h4>
+                        <p>Bengaluru</p>
+                    </div>
                     <i class='bx bx-dollar-circle'></i>
                 </div>
-                <div class="apexchart">
+                <div id="apexchart1">
 
                 </div>
             </div>
-            <div class="chart-card">
+            <div id="chart-card-2" class="chart-card">
                 <div class="chart-des">
-                    <h4>Stats Reports</h4>
-                    <p>Delhi</p>
+                    <div>
+                        <h4>Stats Reports</h4>
+                        <p>Delhi</p>
+                    </div>
                     <i class='bx bx-dollar-circle'></i>
                 </div>
                 <div class="stats">
@@ -132,13 +139,25 @@
                         <span>$241,341</span>
                     </div>
                     <div>
-                        <h3>Profit</h3>
-                        <span>$5545</span>
+                        <h3>Users</h3>
+                        <span>3000</span>
                     </div>
                     <div>
-                        <h3>Stock</h3>
-                        <span>$57878</span>
+                        <h3>Others</h3>
+                        <span>5785</span>
                     </div>
+                </div>
+            </div>
+            <div id="chart-card-3" class="chart-card">
+                <div class="chart-des">
+                    <div>
+                        <h4>Stocks</h4>
+                        <!-- <p>Bengaluru</p> -->
+                    </div>
+                    <i class='bx bx-dollar-circle'></i>
+                </div>
+                <div id="apexchart2">
+
                 </div>
             </div>
         </div>

@@ -65,7 +65,76 @@ body {
 
 #aside-sidebar {
     grid-area: aside;
-    background-color: rgb(59, 57, 57);
+    background-color: rgb(22, 20, 20);
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+#aside-sidebar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(22, 20, 20);
+}
+
+#aside-sidebar::-webkit-scrollbar-thumb {
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+#aside-sidebar h1 {
+    font-size: 30px;
+    color: white;
+}
+
+#aside-sidebar div {
+    font-size: 20px;
+    color: rgb(57, 124, 57);
+    width: 100%;
+}
+
+#aside-sidebar div i {
+    font-size: 30px;
+    color: rgb(3, 61, 3);
+    width: 100%;
+    background-color: rgba(93, 233, 93, 0.4);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#aside-sidebar ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#aside-sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+
+#aside-sidebar ul li a:hover {
+    background-color: lightblue;
+    border-radius: 10px;
+    color: rgb(3, 61, 3);
+    /* border: 2px solid rgb(3, 61, 3); */
+}
+
+#aside-sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    color: lightblue;
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+#aside-sidebar ul li a i {
+    font-size: 30px;
+    margin-right: 20px;
 }
 
 #main-container {
@@ -138,10 +207,15 @@ body {
 .chart-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
     grid-gap: 30px;
     margin: 20px 0;
     padding: 20px;
     width: 100%;
+    grid-template-areas:
+    "lineonea lineoneb"
+    "line line";
+    /* height: 100%; */
 }
 
 .chart-card {
@@ -151,4 +225,61 @@ body {
     box-shadow: 1px 5px 10px 0 rgb(93, 93, 252);
     border-radius: 10px;
     padding: 20px;
+}
+
+#chart-card-1 {
+    grid-area: lineonea;
+}
+
+#chart-card-2 {
+    grid-area: lineoneb;
+}
+
+#chart-card-3 {
+    grid-area: line;
+    width: 1020px;
+}
+
+.chart-des {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-des div h4 {
+    font-size: 25px;
+    color: orange;
+    font-weight: bolder;
+}
+
+.chart-des div p {
+    font-size: 18px;
+    color: rgb(109, 109, 109);
+    font-weight: bolder;
+}
+
+.chart-des i {
+    font-size: 25px;
+    padding: 15px 10px;
+    background-color: rgb(252, 188, 71);
+    border-radius: 200px 0 200px 200px;
+    border: 2px solid orange;
+}
+
+.chart-card .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-card .stats div {
+    background-color: lightblue;
+    text-align: center;
+    color: darkblue;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid darkblue;
 }
