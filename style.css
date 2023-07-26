@@ -10,15 +10,20 @@
 body {
     width: 100vw;
     height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-columns: 0.75fr repeat(3, 1fr);
     grid-template-rows: 0.4fr 10fr;
     grid-template-areas:
         "aside nav nav nav"
-        "aside main main mian";
+        "aside main main main";
     background-color: rgb(187, 188, 255);
-    padding: 0;
-    margin: 0;
 }
 
 #navbar {
@@ -63,11 +68,26 @@ body {
     width: 30px;
 }
 
+#nav-icon {
+    font-size: 25px;
+    /* color: white; */
+    cursor: pointer;
+}
+
+#aside-icon {
+    font-size: 25px;
+    color: white;
+    /* align-items: end; */
+    position: relative;
+    left: 200px;
+    cursor: pointer;
+}
+
 #aside-sidebar {
     grid-area: aside;
     background-color: rgb(22, 20, 20);
     padding: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 #aside-sidebar::-webkit-scrollbar {
@@ -140,6 +160,7 @@ body {
 #main-container {
     grid-area: main;
     width: 100%;
+    overflow-y: auto;
 }
 
 .hello {
@@ -207,14 +228,14 @@ body {
 .chart-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     grid-gap: 30px;
     margin: 20px 0;
     padding: 20px;
     width: 100%;
-    grid-template-areas:
-    "lineonea lineoneb"
-    "line line";
+    /* grid-template-areas:
+        "lineonea lineoneb"
+        "line line"; */
     /* height: 100%; */
 }
 
@@ -227,7 +248,7 @@ body {
     padding: 20px;
 }
 
-#chart-card-1 {
+/* #chart-card-1 {
     grid-area: lineonea;
 }
 
@@ -238,7 +259,7 @@ body {
 #chart-card-3 {
     grid-area: line;
     width: 1020px;
-}
+} */
 
 .chart-des {
     display: flex;
@@ -282,4 +303,80 @@ body {
     padding: 20px 10px;
     border-radius: 10px;
     border: 1px solid darkblue;
+}
+
+
+@media only screen and (max-width:1080px) {
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr, 10fr;
+        grid-template-areas: "nav"
+            "main";
+        width: 100%;
+    }
+
+    #aside-sidebar {
+        display: none;
+        /* width: 0%; */
+    }
+
+    .main-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-card {
+        width: 100%;
+    }
+
+    .chart-cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .chart-card {
+        width: 100%;
+    }
+
+    #navbar {
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width:800px) {
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr, 10fr;
+        grid-template-areas: "nav"
+            "main";
+        width: 100%;
+    }
+
+    #aside-sidebar {
+        display: none;
+        /* width: 0%; */
+    }
+
+    .main-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .main-card {
+        width: 100%;
+    }
+
+    .chart-cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .chart-card {
+        width: 100%;
+    }
+
+    #navbar {
+        width: 100%;
+    }
+
 }

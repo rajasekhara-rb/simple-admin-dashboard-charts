@@ -1,3 +1,43 @@
+// toggle side bar logic
+
+// const navicon = document.getElementById("nav-icon");
+// const asideicon = document.getElementById("aside-icon");
+
+// const container = document.getElementById("container");
+// const sidebar = document.getElementById("aside-sidebar");
+// const navbar = document.getElementById("navbar");
+// const main = document.getElementById("main-container");
+
+// const isSidebarOpen = false;
+
+// navicon.addEventListener("click", () => {
+//     sidebar.style.display = "none";
+//     // sidebar.style.width = "0";
+
+//     // container.style.gridTemplateColumns = "1fr";
+//     // container.style.gridTemplateRows = "0.4fr 10fr";
+//     // container.style.gridTemplateAreas = "nav"
+//     // "main";
+
+//     // navbar.style.gridArea = nav;
+//     // // navbar.style.width = "100%"
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// charts 
+
 var options = {
     chart: {
         type: 'bar'
@@ -315,3 +355,64 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#apexchart2"), options);
 chart.render();
+
+
+
+var options = {
+    series: [
+        {
+            name: "",
+            data: [200, 330, 548, 740, 880, 990, 1100, 1380],
+        },
+    ],
+    chart: {
+        type: 'bar',
+        height: 350,
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 0,
+            horizontal: true,
+            distributed: true,
+            barHeight: '80%',
+            isFunnel: true,
+        },
+    },
+    colors: [
+        '#F44F5E',
+        '#E55A89',
+        '#D863B1',
+        '#CA6CD8',
+        '#B57BED',
+        '#8D95EB',
+        '#62ACEA',
+        '#4BC3E6',
+    ],
+    dataLabels: {
+        enabled: true,
+        formatter: function (val, opt) {
+            return opt.w.globals.labels[opt.dataPointIndex]
+        },
+        dropShadow: {
+            enabled: true,
+        },
+    },
+    title: {
+        text: 'Pyramid Chart',
+        align: 'middle',
+    },
+    xaxis: {
+        categories: ['Sweets', 'Processed Foods', 'Healthy Fats', 'Meat', 'Beans & Legumes', 'Dairy', 'Fruits & Vegetables', 'Grains'],
+    },
+    legend: {
+        show: false,
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#apexchart3"), options);
+chart.render();
+
+
+
+
+
